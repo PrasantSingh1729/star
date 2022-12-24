@@ -1,14 +1,18 @@
 #include <bits/stdc++.h> 
 using namespace std;
 
+void solve(int n){
+    if(n==0) return;
+    solve(n-1);
+    for(int i=0;i<n;i++) cout<<"* ";
+    cout<<"\n";
+    
+}
+
 int main()
 {
     int n=5;
-    for(int i=0;i<n;i++){
-        for(int j=0;j<i;j++)
-            cout<<"* ";
-        cout<<"\n";
-    }
+    solve(n);
     
     
     return 0;
